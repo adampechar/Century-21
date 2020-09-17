@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Josef Kříženecký</title>
+    <style rel="stylesheet">
+      /* Global styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+      html,body{
+        overflow-x: hidden;
+      } 
+
+      a {
+        text-decoration: none;
+        color: rgba(0,0,0,.7);
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      header {
+        background-color: #fff;
+        width: 100%;
+        z-index: 1;
+      }
+      @media (max-width: 600px) {
+        
+      }
+      /* navigation */
+      .nav-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.8rem 0;
+      }
+
+      .menu-icons i {
+        font-size: 3.5rem;
+        color: #fafafa;
+        cursor: pointer;
+      }
+
+      .close i {
+        color: gray;
+      }
+
+      .nav-list {
+        width: 18.75rem;
+        height: 100vh;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        right: -26rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 150;
+        transition: all 650ms ease-in-out;
+        font-size: 1.6rem;
+      }
+
+      .ion-md-menu {
+        
+      }
+
+      .ion-md-menu:before {
+        color: black;
+      }
+
+      .nav-list.active {
+        right: 0;
+      }
+
+      .close {
+        position: absolute;
+        top: 1rem;
+        left: 1.5rem;
+      }
+
+      .nav-item {
+        margin: 1.5rem 0;
+      }
+
+      /* top content */
+
+      .top-content {
+        width: 100%;
+        height: 25rem;
+        background-image: url(./josef.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center right;
+        
+      }
+
+      .interduction {
+        position: relative;
+        top: 13rem;
+        left: 1.5rem;
+      }
+
+      #bfr-heading {
+        display: inline-block;
+        padding-bottom: 10px;
+        font-size: 1.4rem;
+        color: #fff;
+        filter: none;
+      }
+
+      .josef {
+        font-size: 1.6875rem;
+        line-height: 1.5;
+        color: #000000B3
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        width: 60%;
+        color: #fff
+      }
+
+      h2 {
+        margin: 1.7rem auto;
+        text-align: center;
+        font-size: 1.6rem;
+        width: 70%;
+        line-height: 1.6;
+      }
+
+      hr  { 
+        margin: .8rem auto;
+        width: 10%;
+        border: dotted #a09373 5px;
+        border-bottom: none;
+      }
+
+
+      .interduction-text {
+        color: black;
+        line-height: 1.5;
+        text-align: justify;
+        width: 90%;
+        margin: 0 auto 1.8rem auto;
+      }
+
+      .interduction-text-question {
+        margin: 1.8rem auto;
+        text-align: center;
+        line-height: 1.7;
+      }
+
+      .interduction-text-end {
+        justify-self: start;
+        width: 90%;
+        margin: 0 auto 2rem;
+      }
+
+      .base-questions {
+        margin: 10px auto;
+        text-align: center;
+        padding-left: 10px;
+        display: inline-block;
+        line-height: 2;
+      }
+
+    .reference {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 100%;
+      height: 80vh;
+      background-color: #a09373;
+    }
+
+    .reference p {
+      margin-top: 0.7rem;  
+      margin-right: 1rem;    
+    }
+
+    .reference-heading {
+      margin-left: 36%;
+      text-transform: uppercase;
+    }
+
+    .small-icon {
+      width: 28%;
+      margin-left: 2%;
+      margin-right: 20px;
+      float: left;
+    }
+
+    h3 {
+      color:#ffffff;
+      
+    }
+
+    .e-heading {
+      color:rgb(95, 93, 93);
+      font-size: 2rem;
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    .e-book {
+      width: 82%;
+      margin: 0 auto;
+    }
+
+    .e-book-strong {
+      font-size: 1.4rem;
+    }
+
+    .e-book p {
+      margin: 10px 0;
+      line-height: 1.35;
+     
+    }
+
+    button {
+      margin: 0.8rem 0 2rem 0;
+      background-color: black;
+      color: #fff;
+      border-color: #2e2e2e;
+      font-size: 1.15rem;
+      width: 100%;
+      height: 2.6rem;
+    }
+    
+    @media (min-width: 768px) {
+      .top-content{
+        height: 40rem;
+        /* height: 36rem; */
+        background-size: cover;
+      }
+
+      .interduction{
+        top: 27rem;
+        left: 2.5rem;
+      }
+
+      .ion-md-menu:before {
+        display: none;
+      }
+
+      .ion-md-close:before {
+          display: none;
+      }
+
+      nav a:hover {
+        color: #f3f2ed;
+        background: #e09c15;
+        border-radius: 10px;
+        border: none;
+      }
+
+      button {
+        width: 20%;
+        margin: 1rem auto;
+        display: block;
+      }
+
+      .nav-list {
+        right: 0;
+        width: 53%;
+        height: 2rem;
+        position: relative;
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.1rem;
+        padding: 2rem 0;
+      }
+
+      .nav-list a{
+        display: inline-block;
+        padding: 1.3rem;
+      }
+
+      .interduction-text-end {
+        text-align: center;
+      }
+
+      .reference {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        height: 70vh;
+      }
+
+      .reference-container {
+        height: 50vh;
+        width: 25%;
+      }
+
+      .reference p {
+        font-size: 1.3rem;
+        
+      }
+
+      .small-icon {
+        width: 45%;
+        position: relative;
+        left: 27%;;
+        top: 2rem;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .middle-container{
+        height: inherit;
+        margin: 60% auto 0 auto;
+        text-align: center;
+      }
+
+      .reference-heading {
+        margin: 0 auto;
+        font-size: 1.8rem;
+      }
+
+      .interduction-text {
+        text-align: center;
+      }
+
+      .e-book strong {
+        display: block;
+      font-size: 1.6rem;
+      text-align: center;
+      margin: 0 auto 0 auto;
+    }
+
+    .e-book p {
+      text-align: center;
+    }
+
+    .e-book div {
+      width: 50%;
+      margin: 0 auto;
+
+    }
+
+    button:hover{
+      background-color: #494949;
+      border-color: #494949;
+      transition: all 0.3s ease 0s;
+    }
+
+    button {
+      width: 12rem;
+    }
+
+    }
+
+    
+
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-container">
+        <nav>
+          <div>
+            <strong class="josef">Josef Kříženecký</strong>
+          </div>
+          <div class="menu-icons open">
+            <i class="icon ion-md-menu"></i>
+          </div>
+          <ul class="nav-list">
+            <div class="menu-icons close">
+              <i class="icon ion-md-close"></i>
+            </div>
+            <li class="nav-item"><a href="#">DOMŮ</a></li>
+            <li class="nav-item"><a href="#">O&nbspMNĚ</a></li>
+            <li class="nav-item"><a href="#">REFERENCE</a></li>
+            <li class="nav-item"><a href="#">NEMOVITOSTI</a></li>
+            <li class="nav-item"><a href="#">BLOG</a></li>
+            <li class="nav-item"><a href="#">KONTAKT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="top-content">
+      <div class="interduction">
+        <strong id="bfr-heading">realitní makléř</strong>
+        <h1>Century 21 New Home</h1>
+      </div>
+    </section>
+
+    <main>
+      <section class="container"></section>
+        <h2>Jak se teď prodávají byty?</h2>
+        <p class="interduction-text">Přesně tak
+          zní asi nejčastější otázka, kterou mi pokládají klienti nebo přátelé
+          v momentě, kdy se začneme bavit na téma "nemovitosti".</p>
+          <hr>
+          <div>
+          <p class="interduction-text-question">
+            <strong>Na kolik se vyplatí koupit byt a na co si při jeho nákupu dát
+              pozor?</strong><br>
+            <strong>Jak vybrat lokalitu?</strong><br>
+            <strong>Jak posoudit charakter stavby?</strong><br>
+            <strong>Jak posoudit vybavení bytu</strong><br>
+            <strong>Jak posoudit příslušenstvní bytu?</strong></p>
+          <p class="interduction-text-end">a spoustu dalších dotazů ohledně nemovitostí nebo jejich financování Vám pomohu vyřešit.
+          </p>
+          </div>
+      </section>
+      <section>
+        <div class="reference">
+          <div class="reference-container">
+            <img class="small-icon"src="/nemovitosti.png" alt="nemovitosti">
+            <div class="middle-container">
+                <h3 class="reference-heading">Nemovitosti</h3>
+                <p>Excepturi dolores consequatur eius sint neque distinctio fugiat dol odit quibusdam</p>
+              </div>
+        </div>
+            <div class="reference-container">
+              <img class="small-icon"src="/reference.png" alt="">
+                <div class="middle-container">
+                  <h3 class="reference-heading">Reference</h3>
+                  <p>Excepturi dolores consequatur eius sint neque distinctio fugiat dol odit quibusdam</p>
+                </div>
+            </div>
+          <div class="reference-container">
+            <img class="small-icon"src="/blog.png" alt="">
+              <div class="middle-container">
+                <h3 class="reference-heading">Služby</h3>          
+                <p>Excepturi dolores consequatur eius sint neque distinctio fugiat dol odit quibusdam</p>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="e-book">
+        <div>
+        <h3 class="e-heading">E-BOOKY</h3>
+        <strong class="e-book-strong">Váš byt, Vaše investice</strong>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eligendi ad quibusdam quis maxime blanditiis repellendus unde nihil illum! Excepturi dolores consequatur.</p>
+        <button>Stáhnout zde</button>
+      </div>
+      <div>
+        <h3>Pro developery</h3>
+        <strong class="e-book-strong">Váš byt, Vaše investice</strong>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eligendi ad quibusdam quis maxime blanditiis repellendus unde nihil illum! Excepturi dolores consequatur.</p>
+        <button>Stáhnout zde</button>
+      </div>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script type="text/javascript">
+      //Function expression to select elements
+      const selectElement = (s) => document.querySelector(s);
+      //Open the menu on click
+      selectElement(".open").addEventListener("click", () => {
+        selectElement(".nav-list").classList.add("active");
+      });
+      //close the menu on click
+      selectElement(".close").addEventListener("click", () => {
+        selectElement(".nav-list").classList.remove("active");
+      });
+    </script>
+  </body>
+</html>
